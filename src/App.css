@@ -1,38 +1,186 @@
 .App {
   text-align: center;
-}
+  background-color: darkslategrey;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100%;
+  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  align-items: center;
+  width: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.atropos-banner {
+  width: 100%;
+}
+.atropos-banner .atropos-inner {
+  border-radius: 10px;
+}
+.atropos-banner img {
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  object-fit: contain;
+  display: block;
+  z-index: 1;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+.atropos-banner .atropos-banner-spacer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+}
+.atropos-banner .atropos-shadow {
+  filter: blur(50px);
+  opacity: 0.5;
+}
+
+.atropos-banner .atropos-highlight {
+  z-index: 100;
+}
+
+
+/* PS5 */
+
+.ps5-case{
+  width: 400px;
+
+  margin: 30px;
+}
+
+.atropos-ps5 {
+  width: 100%;
+  aspect-ratio: 526/656;
+}
+
+.atropos-ps5 .atropos-inner {
+  z-index: 2;
+}
+
+.atropos-ps5 img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  display: block;
+  z-index: 1;
+  transform-style: preserve-3d;
+  pointer-events: none;
+  max-width: none
+}
+
+.ps5-case.wip {
+  filter: grayscale(100%);
+}
+
+
+
+/* 3D EFFECT BOX */
+
+.atropos-ps5 .atropos-shadow,.movie-box .atropos-shadow {
+  opacity: .5;
+  transform: translateZ(-1px)
+}
+
+.atropos-ps5 {
+  --side-color: #004297;
+  --side-size: 32px;
+  aspect-ratio: 526/656
+}
+
+.atropos-ps5 img.atropos-ps5-bg {
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%
+}
+
+.atropos-ps5 img.atropos-ps5-size {
+  position: relative;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 0;
+  visibility: hidden
+}
+
+.atropos-ps5 .atropos-rotate:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: calc(100% + 8px);
+  height: calc(100% + 16px);
+  top: -8px;
+  background: #086ef4;
+  z-index: 1
+}
+
+.atropos-ps5-b,.atropos-ps5-l,.atropos-ps5-r,.atropos-ps5-t {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  position: absolute
+}
+
+.atropos-ps5-t {
+  top: -8px;
+  transform: translateZ(-32px) rotateX(90deg);
+  transform-origin: center top
+}
+
+.atropos-ps5-b,.atropos-ps5-t {
+  width: calc(100% + 8px);
+  height: var(--side-size);
+  background: var(--side-color);
+  left: 0
+}
+
+.atropos-ps5-b {
+  bottom: -8px;
+  transform: translateZ(-32px) rotateX(-90deg);
+  transform-origin: center bottom
+}
+
+.atropos-ps5-r {
+  right: -8px;
+  transform: translateZ(-32px) rotateY(90deg);
+  transform-origin: right center
+}
+
+.atropos-ps5-l,.atropos-ps5-r {
+  width: var(--side-size);
+  height: calc(100% + 16px);
+  background: var(--side-color);
+  top: -8px
+}
+
+.atropos-ps5-l {
+  left: 0;
+  transform: translateZ(-32px) rotateY(-90deg);
+  transform-origin: left center;
+  overflow: hidden
+}
+
+.atropos-ps5-l::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10.4%;
+  background: #a5a5a5;
+  left: 0;
+  top: 9px
 }
