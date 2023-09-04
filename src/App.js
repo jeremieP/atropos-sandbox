@@ -19,7 +19,7 @@ function App() {
         </Atropos>
 
         <h2>PS5 Boxes</h2>
-        <div className="ps5-case">
+        <div className="ps5-case wip">
           <Atropos className="atropos-ps5" highlight={false} rotateXMax={25} rotateYMax={25} rotateChildren={<>
             <span class="atropos-ps5-t"></span>
             <span class="atropos-ps5-r"></span>
@@ -29,7 +29,7 @@ function App() {
             <img data-atropos-offset="0" className="atropos-ps5-size" src="/atropos/ps5/box-size.svg" alt="" />
             <img data-atropos-offset="3" className='atropos-ps5-bg' src="/atropos/ps5/ratchet-bg.jpg" alt="" />  
             <img data-atropos-offset="0" src="/atropos/ps5/box-ribbon.svg" alt="" />
-            <img data-atropos-offset="3" src="/atropos/ps5/ps-studios-logo.svg" alt="" />
+            <img data-atropos-offset="1" src="/atropos/ps5/ps-studios-logo.svg" alt="" />
             <img data-atropos-offset="5" src="/atropos/ps5/ratchet-logo.png" alt="" />
             <img data-atropos-offset="6" src="/atropos/ps5/platinum-layer-bl.png" className="platinum" alt="" />
           </Atropos>
@@ -43,7 +43,7 @@ function App() {
             <span class="atropos-ps5-l"></span>
           </>}>
             <img data-atropos-offset="0" className="atropos-ps5-size" src="/atropos/ps5/box-size.svg" alt="" />
-            <img data-atropos-offset="3" className='atropos-ps5-bg' src="/atropos/ps5/gow-ragnarok-bg.png" alt="" />
+            <img data-atropos-offset="1" className='atropos-ps5-bg' src="/atropos/ps5/gow-ragnarok-bg.png" alt="" />
             <img data-atropos-offset="0" src="/atropos/ps5/box-ribbon.svg" alt="" />
             <img data-atropos-offset="3" src="/atropos/ps5/gow-ragnarok-logo.png" alt="" />
             <img data-atropos-offset="5" src="/atropos/ps5/ps-studios-logo.svg" alt="" />
